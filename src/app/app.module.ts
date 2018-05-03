@@ -1,21 +1,20 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
-
 import { AppComponent } from './app.component';
-import { HttpClientModule } from '@angular/common/http';
-import { AppService } from './app.service';
+import { WaterModule } from './water/water.module';
+import { BeerStyleComponent } from './water/components/beer-style/beer-style.component';
 
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    BeerStyleComponent
   ],
   imports: [
     BrowserModule,
-    HttpClientModule
+    WaterModule
   ],
-  providers: [ AppService ],
   bootstrap: [ AppComponent ]
 })
 export class AppModule { }
