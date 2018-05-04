@@ -1,6 +1,6 @@
 /* You can add global styles to this file, and also import other style files */
 
-@import "~bootstrap/dist/css/bootstrap.css";
+@import '~bootstrap/dist/css/bootstrap.min.css';
 
 
 body {
@@ -9,4 +9,10 @@ body {
 .starter-template {
   padding: 3rem 1.5rem;
   text-align: center;
+}
+
+.scrollable-menu {
+  height: auto;
+  max-height: 200px;
+  overflow-x: hidden;
 }

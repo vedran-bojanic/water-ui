@@ -6,6 +6,8 @@ import { WaterModule } from './water/water.module';
 import { BeerStyleComponent } from './water/components/beer-style/beer-style.component';
 import { NavbarComponent } from './header/components/navbar/navbar.component';
 
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+
 
 @NgModule({
   declarations: [
@@ -15,7 +17,8 @@ import { NavbarComponent } from './header/components/navbar/navbar.component';
   ],
   imports: [
     BrowserModule,
-    WaterModule
+    WaterModule,
+    NgbModule.forRoot()
   ],
   bootstrap: [ AppComponent ]
 })
