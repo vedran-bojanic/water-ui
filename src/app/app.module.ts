@@ -4,12 +4,14 @@ import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
 import { WaterModule } from './water/water.module';
 import { BeerStyleComponent } from './water/components/beer-style/beer-style.component';
+import { NavbarComponent } from './header/components/navbar/navbar.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    BeerStyleComponent
+    BeerStyleComponent,
+    NavbarComponent
   ],
   imports: [
     BrowserModule,

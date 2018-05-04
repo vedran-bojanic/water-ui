@@ -3,8 +3,7 @@ import { BeerStyleService } from '../../services/beer-style.service';
 
 @Component({
   selector: 'app-beer-style',
-  templateUrl: './beer-style.component.html',
-  styleUrls: ['./beer-style.component.css']
+  templateUrl: './beer-style.component.html'
 })
 export class BeerStyleComponent implements OnInit {
   beerStyles: Array<any>;
