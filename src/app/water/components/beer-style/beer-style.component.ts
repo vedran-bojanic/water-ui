@@ -7,6 +7,7 @@ import { BeerStyleService } from '../../services/beer-style.service';
 })
 export class BeerStyleComponent implements OnInit {
   beerStyles: Array<any>;
+  selectedBeer: any;
 
   constructor(private beerStyleService: BeerStyleService) { }
 

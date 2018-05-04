@@ -7,13 +7,15 @@ import { BeerStyleComponent } from './water/components/beer-style/beer-style.com
 import { NavbarComponent } from './header/components/navbar/navbar.component';
 
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { FooterComponent } from './footer/components/footer/footer.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     BeerStyleComponent,
-    NavbarComponent
+    NavbarComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
