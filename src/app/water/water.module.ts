@@ -8,9 +8,9 @@ import { HttpClientModule } from '@angular/common/http';
     CommonModule,
     HttpClientModule
   ],
-  declarations: [],
   providers: [
     BeerStyleService
-  ]
+  ],
+  declarations: [ ]
 })
 export class WaterModule { }

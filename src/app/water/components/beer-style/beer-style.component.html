@@ -16,7 +16,7 @@
     <h2 class="text-muted">{{ selectedBeer.name }}</h2>
   </div>
 </div>
-<table class="table">
+<table class="table table-striped table-bordered">
   <thead>
     <tr>
       <th scope="col">Mineral Ranges for the Style</th>
@@ -32,7 +32,7 @@
   </thead>
   <tbody>
     <tr>
-      <td scope="1">(ppm)</td>
+      <td scope="row">(ppm)</td>
       <td>{{ selectedBeer.calciumRange }}</td>
       <td>{{ selectedBeer.magnesiumRange }}</td>
       <td>{{ selectedBeer.alkalinityRange }}</td>

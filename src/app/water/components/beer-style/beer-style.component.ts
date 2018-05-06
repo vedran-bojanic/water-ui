@@ -16,6 +16,20 @@ export class BeerStyleComponent implements OnInit, OnDestroy {
   constructor(private beerStyleService: BeerStyleService) { }
 
   ngOnInit() {
+    this.selectedBeer = {
+      id: 0,
+      bjcpStyleId: '',
+      name: '',
+      calciumRange: '',
+      magnesiumRange: '',
+      alkalinityRange: '',
+      sulfateRange: '',
+      chlorideRange: '',
+      sodiumRange: '',
+      residualAlkalinityRange: '',
+      color: ''
+    }
+
     this.beerStyleSubscription = this.beerStyleService.getAllBeerStyles()
       .subscribe(beers => {
         this.beerStyles = beers;
