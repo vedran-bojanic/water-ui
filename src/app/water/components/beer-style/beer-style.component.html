@@ -3,16 +3,44 @@
     <h4>List of beer styles by BJCP</h4>
   </div>
 </div>
-<div class="row">
+<div class="row py-1">
   <div class="col-sm-6 col-md-3 col-lg-2">
     <div ngbDropdown class="dropdown">
       <button id="dropdownMenu" class="btn btn-outline-secondary" ngbDropdownToggle>BJCP Beer styles</button>
       <div ngbDropdownMenu class="scrollable-menu" aria-labelledby="dropdownMenu">
-        <button class="dropdown-item" *ngFor="let beer of beerStyles" value="{{beer.id}}" (click)="selectedBeer = beer">{{beer.bjcpStyleId}}. {{beer.name}}</button>
+        <button class="dropdown-item" *ngFor="let beer of beerStyles" value="{{ beer.id }}" (click)="selectedBeer = beer">{{ beer.bjcpStyleId }}. {{ beer.name }}</button>
       </div>
     </div>
   </div>
   <div class="col-sm-6 col-md-9 col-lg-10">
-    <h2 class="text-muted">{{selectedBeer.name}}</h2>
+    <h2 class="text-muted">{{ selectedBeer.name }}</h2>
   </div>
 </div>
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">Mineral Ranges for the Style</th>
+      <th scope="col">Calcium (Ca)</th>
+      <th scope="col">Magnesium (Mg)</th>
+      <th scope="col">Alkalinity as CaCO3</th>
+      <th scope="col">Sulfate (SO2)</th>
+      <th scope="col">Chloride (Cl)</th>
+      <th scope="col">Sodium (Na)</th>
+      <th scope="col">Residual Alkalinity</th>
+      <th scope="col">Color (EBC)</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td scope="1">(ppm)</td>
+      <td>{{ selectedBeer.calciumRange }}</td>
+      <td>{{ selectedBeer.magnesiumRange }}</td>
+      <td>{{ selectedBeer.alkalinityRange }}</td>
+      <td>{{ selectedBeer.sulfateRange }}</td>
+      <td>{{ selectedBeer.chlorideRange }}</td>
+      <td>{{ selectedBeer.sodiumRange }}</td>
+      <td>{{ selectedBeer.residualAlkalinityRange }}</td>
+      <td>{{ selectedBeer.color }}</td>
+    </tr>
+  </tbody>
+</table>
