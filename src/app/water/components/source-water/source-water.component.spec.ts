@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { SourceWaterDataComponent } from './source-water-data.component';
+import { SourceWaterComponent } from './source-water.component';
 
-describe('SourceWaterDataComponent', () => {
-  let component: SourceWaterDataComponent;
-  let fixture: ComponentFixture<SourceWaterDataComponent>;
+describe('SourceWaterComponent', () => {
+  let component: SourceWaterComponent;
+  let fixture: ComponentFixture<SourceWaterComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ SourceWaterDataComponent ]
+      declarations: [ SourceWaterComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(SourceWaterDataComponent);
+    fixture = TestBed.createComponent(SourceWaterComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

@@ -3,8 +3,14 @@ import { CommonModule } from '@angular/common';
 import { BeerStyleService } from './services/beer-style.service';
 import { HttpClientModule } from '@angular/common/http';
 import { BeerStyleComponent } from './components/beer-style/beer-style.component';
-import { SourceWaterDataComponent } from './components/source-water-data/source-water-data.component';
+import { SourceWaterComponent } from './components/source-water/source-water.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { MashWaterComponent } from './components/mash-water/mash-water.component';
+import { DiluteWaterComponent } from './components/dilute-water/dilute-water.component';
+import { SaltAdditionComponent } from './components/salt-addition/salt-addition.component';
+import { AcidAdditionComponent } from './components/acid-addition/acid-addition.component';
+import { WaterSummaryComponent } from './components/water-summary/water-summary.component';
+import { SpargeWaterComponent } from './components/sparge-water/sparge-water.component';
 
 @NgModule({
   imports: [
@@ -17,11 +23,23 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
   ],
   declarations: [
     BeerStyleComponent,
-    SourceWaterDataComponent
+    SourceWaterComponent,
+    MashWaterComponent,
+    DiluteWaterComponent,
+    SaltAdditionComponent,
+    AcidAdditionComponent,
+    WaterSummaryComponent,
+    SpargeWaterComponent
   ],
   exports: [
     BeerStyleComponent,
-    SourceWaterDataComponent
+    SourceWaterComponent,
+    MashWaterComponent,
+    DiluteWaterComponent,
+    SaltAdditionComponent,
+    AcidAdditionComponent,
+    WaterSummaryComponent,
+    SpargeWaterComponent
   ]
 })
 export class WaterModule { }
