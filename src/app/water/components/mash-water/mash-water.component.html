@@ -3,6 +3,45 @@
     <h4>Mash water volume and target Residual Alkalinity Value</h4>
   </div>
 </div>
-<p>
-  mash-water works!
-</p>
+<div class="row">
+  <div class="col-2 py-4">
+    <label for="target_r_a">Target RA</label>
+    <input type="number" class="form-control" id="target_r_a" placeholder="ppm" required="">
+  </div>
+  <div class="col-2 py-4">
+    <label for="mash_water">Mash water (L)</label>
+    <input type="number" class="form-control" id="mash_water" placeholder="ppm" required="">
+  </div>
+  <div class="col-4">
+    <table class="table table-striped table-bordered">
+      <thead>
+      <tr>
+        <th scope="col">Alkalinity to be reduced</th>
+        <th scope="col">Additionaly Alkalinity needed</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr>
+        <td>(ppm)</td>
+        <td></td>
+      </tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="col-4">
+    <table class="table table-striped table-bordered">
+      <thead>
+      <tr>
+        <th scope="col">Target RA EBC (Low)</th>
+        <th scope="col">Target RA EBC (High)</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr>
+        <td>(ppm)</td>
+        <td></td>
+      </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
