@@ -16,7 +16,7 @@ export class BeerStyleService {
   getAllBeerStyles(): Observable<Array<BeerStyle>> {
     return this.http.get<Array<BeerStyle>>(this.BEER_STYLE_URL)
       .pipe(
-        map(data => this.beerStyles = data)
+        map(beerStyle => this.beerStyles = beerStyle)
       );
   }
 

@@ -40,4 +40,5 @@ export class BeerStyleComponent implements OnInit, OnDestroy {
   ngOnDestroy() {
     this.beerStyleSubscription.unsubscribe();
   }
+
 }

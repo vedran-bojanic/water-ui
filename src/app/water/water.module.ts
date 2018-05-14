@@ -11,6 +11,7 @@ import { SaltAdditionComponent } from './components/salt-addition/salt-addition.
 import { AcidAdditionComponent } from './components/acid-addition/acid-addition.component';
 import { WaterSummaryComponent } from './components/water-summary/water-summary.component';
 import { SpargeWaterComponent } from './components/sparge-water/sparge-water.component';
+import { AcidService } from './services/acid.service';
 
 @NgModule({
   imports: [
@@ -19,7 +20,8 @@ import { SpargeWaterComponent } from './components/sparge-water/sparge-water.com
     NgbModule
   ],
   providers: [
-    BeerStyleService
+    BeerStyleService,
+    AcidService
   ],
   declarations: [
     BeerStyleComponent,

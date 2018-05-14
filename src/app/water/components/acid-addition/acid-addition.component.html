@@ -3,6 +3,55 @@
     <h4>Acid add to brewing water to adjust RA to target value</h4>
   </div>
 </div>
-<p>
-  acid-addition works!
-</p>
+<div class="row py-2">
+  <div class="col-2">
+    <div ngbDropdown class="dropdown">
+      <button id="dropdownMenu" class="btn btn-outline-secondary" ngbDropdownToggle>Choose Acid</button>
+      <div ngbDropdownMenu class="scrollable-menu" aria-labelledby="dropdownMenu">
+        <button class="dropdown-item" *ngFor="let acid of acids" value="{{ acid.id }}" (click)="selectedAcid = acid">{{ acid.name }}</button>
+      </div>
+    </div>
+  </div>
+  <div class="col-4 py-2">
+    <div class="col-sm-6 col-md-9 col-lg-10">
+      <h5 class="text-muted">{{ selectedAcid.name }}</h5>
+    </div>
+  </div>
+  <div class="col-4"></div>
+</div>
+<div class="row">
+  <div class="col-2">
+    <label for="target_r_a">Mash Water Addition (ml)</label>
+    <input type="number" class="form-control" id="target_r_a" placeholder="ppm" required="">
+  </div>
+  <div class="col-3">
+    <table class="table table-striped table-bordered">
+      <thead>
+      <tr>
+        <th scope="col">Est. Acid Addition (ml)</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr>
+        <td>(ppm)</td>
+      </tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="col">
+    <table class="table table-striped table-bordered">
+      <thead>
+      <tr>
+        <th scope="col">Alkalinity Reduced (as CaCO3)</th>
+        <th scope="col">Anion Contribution (ppm)</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr>
+        <td scope="row">50%</td>
+        <td>(ppm)</td>
+      </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
