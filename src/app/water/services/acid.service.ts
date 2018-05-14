@@ -14,6 +14,9 @@ export class AcidService {
   constructor(private http: HttpClient) { }
 
   getAllAcids(): Observable<Array<Acid>> {
+    if (this.acids) {
+      return Observable.create(this.acids);
+    }
     return this.http.get<Array<Acid>>(this.ACID_URL)
       .pipe(
         map(acids => this.acids = acids)

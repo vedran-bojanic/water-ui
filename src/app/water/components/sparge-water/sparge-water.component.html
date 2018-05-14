@@ -3,6 +3,61 @@
     <h4>Sparge Water pH Adjustment</h4>
   </div>
 </div>
-<p>
-  sparge-water works!
-</p>
+<div class="row">
+  <div class="col-5">
+    <table class="table table-striped table-bordered">
+      <thead>
+        <tr>
+          <th scope="col">Raw Source Water pH @ 20C</th>
+          <th scope="col">Target Sparge Water pH @ 20C</th>
+          <th scope="col">Sparge Water Volume (L)</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td scope="row">(ppm)</td>
+          <td></td>
+          <td></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+<div class="row">
+  <div class="col-2">
+    <div ngbDropdown class="dropdown">
+      <button id="dropdownMenu" class="btn btn-outline-secondary" ngbDropdownToggle>Choose Acid</button>
+      <div ngbDropdownMenu class="scrollable-menu" aria-labelledby="dropdownMenu">
+        <button class="dropdown-item" *ngFor="let acid of acids" value="{{ acid.id }}" (click)="selectedAcid = acid">{{ acid.name }}</button>
+      </div>
+    </div>
+  </div>
+  <div class="col-4 py-2">
+    <div class="col-sm-6 col-md-9 col-lg-10">
+      <h5 class="text-muted">{{ selectedAcid.name }}</h5>
+    </div>
+  </div>
+  <div class="col-4"></div>
+</div>
+<div class="row">
+  <div class="col-6">
+    <table class="table table-striped table-bordered">
+      <thead>
+        <tr>
+          <th scope="col">Sparge Water Acidification	</th>
+          <th scope="col">Est. Acid Addition (ml)</th>
+          <th scope="col">Sparge Water Addition (ml)</th>
+          <th scope="col">Remaining Alkalinity    (as CaCO3)</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td scope="row"></td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

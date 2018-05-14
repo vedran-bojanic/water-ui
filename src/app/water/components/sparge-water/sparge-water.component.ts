@@ -1,14 +1,19 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input } from '@angular/core';
+import { Acid } from '../../models/acid';
 
 @Component({
   selector: 'app-sparge-water',
   templateUrl: './sparge-water.component.html'
 })
-export class SpargeWaterComponent implements OnInit {
+export class SpargeWaterComponent {
 
-  constructor() { }
+  @Input() acids: Array<Acid>;
+  selectedAcid: Acid;
 
-  ngOnInit() {
+  constructor() {
+    if (!this.selectedAcid) {
+      this.selectedAcid = this.acids[0];
+    }
   }
 
 }
